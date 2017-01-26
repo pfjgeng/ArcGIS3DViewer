@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="2px"
+    android:paddingLeft="2px"
+    android:paddingRight="2px"
+    android:paddingTop="2px">
+    <Esri.ArcGISRuntime.UI.SceneView
+        android:id="@+id/SceneView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+ <ListView
+    android:layout_width="300px"
+    android:layout_height="400px"
+    android:id="@+id/listLayer"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+<ListView
+    android:layout_width="300px"
+    android:layout_height="500px"
+    android:id="@+id/listbookmark"
+    android:layout_below="@+id/listLayer"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+</RelativeLayout>
