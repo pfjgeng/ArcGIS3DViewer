@@ -5,7 +5,7 @@ using Android.Webkit;
 
 namespace ArcGIS3DViewer
 {
-    [Activity(Label = "EsriHelpActivity", MainLauncher = true)]
+    [Activity(Label = "EsriHelpActivity", MainLauncher = false)]
     public class EsriHelpActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

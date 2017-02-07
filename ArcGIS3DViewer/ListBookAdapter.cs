@@ -14,18 +14,19 @@ using UniversalImageLoader.Core;
 using System.IO;
 using Android.Graphics;
 using Android.Util;
+using Esri.ArcGISRuntime.Mapping;
 
 namespace ArcGIS3DViewer
 {
-   public  class ListBookAdapter : BaseAdapter
+    public class ListBookAdapter : BaseAdapter
     {
-        private List<string> Mproducts;
+        List<ItemBookMark> itemBookMarks = null;
         private Context mContext;
         private LayoutInflater mInflater;
-       
-        public ListBookAdapter(List<string> products, Context context)
+
+        public ListBookAdapter(List<ItemBookMark> bks, Context context)
         {
-            this.Mproducts = products;
+            this.itemBookMarks = bks;
             this.mContext = context;
             mInflater = LayoutInflater.From(context);
         }
@@ -33,13 +34,13 @@ namespace ArcGIS3DViewer
         {
             get
             {
-               return this.Mproducts.Count;
+                return this.itemBookMarks.Count;
             }
         }
 
         public override Java.Lang.Object GetItem(int position)
         {
-            return this.Mproducts[position];
+            return this.itemBookMarks[position];
         }
 
         public override long GetItemId(int position)
@@ -52,32 +53,30 @@ namespace ArcGIS3DViewer
             ViewHolder holder = null;
             if (convertView == null)
             {
-              
+
                 holder = new ViewHolder(this.mContext);
 
                 convertView = mInflater.Inflate(Resource.Layout.bookMarkItem, null);
 
                 holder.ImageView = (ImageView)convertView.FindViewById(Resource.Id.bookmarkImage);
                 holder.TextView = (TextView)convertView.FindViewById(Resource.Id.bookmarktile);
-                convertView.Tag=holder;
+                convertView.Tag = holder;
             }
             else
             {
 
                 holder = (ViewHolder)convertView.Tag;
             }
-         
-
-            string base64=  Mproducts[position].ToString().Replace("data:image/jpeg;base64,", string.Empty);
+            string base64 = itemBookMarks[position].BookMarkImage.Replace("data:image/jpeg;base64,", string.Empty);
             byte[] decode = Base64.Decode(base64, Base64Flags.Default);
             Bitmap bitmap = BitmapFactory.DecodeByteArray(decode, 0, decode.Length);
             holder.ImageView.SetImageBitmap(bitmap);
-            holder.TextView.Text = "ÄãºÃ";
+            holder.TextView.Text = itemBookMarks[position].BookMarkName;
             return convertView;
         }
     }
 
-    public class ViewHolder: View
+    public class ViewHolder : View
     {
         private ImageView imageView;
         private TextView textView;
@@ -108,9 +107,62 @@ namespace ArcGIS3DViewer
             }
         }
 
-        public ViewHolder(Context context):base(context)
+        public ViewHolder(Context context) : base(context)
         {
-           
+
+        }
+    }
+
+    public class ItemBookMark: Java.Lang.Object
+    {
+        private string bookMarkName = string.Empty;
+        private string bookMarkImage = string.Empty;
+        private Bookmark portalBookmark = null;
+
+        public ItemBookMark(string name, string strImage, Bookmark bk)
+        {
+            this.bookMarkName = name;
+            this.bookMarkImage = strImage;
+            this.portalBookmark = bk;
+        }
+
+        public string BookMarkName
+        {
+            get
+            {
+                return bookMarkName;
+            }
+
+            set
+            {
+                bookMarkName = value;
+            }
+        }
+
+        public string BookMarkImage
+        {
+            get
+            {
+                return bookMarkImage;
+            }
+
+            set
+            {
+                bookMarkImage = value;
+            }
+        }
+
+        public Bookmark PortalBookmark
+        {
+            get
+            {
+                return portalBookmark;
+            }
+
+            set
+            {
+                portalBookmark = value;
+            }
         }
     }
 }

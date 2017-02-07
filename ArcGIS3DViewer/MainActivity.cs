@@ -184,7 +184,7 @@ namespace ArcGIS3DViewer
         }
         private async void Btn_Click(object sender, EventArgs e)
         {
-            addProtal();
+            
         }
         private bool checkEndsWithInStringArray(String checkItsEnd,  String[] fileEndings)
         {

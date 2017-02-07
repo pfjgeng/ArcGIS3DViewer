@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="EsriHelpActivity.cs" />
     <Compile Include="ListBookAdapter.cs" />
+    <Compile Include="ListLayerAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="MasonryAdapter.cs" />
@@ -111,6 +112,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PhotoCardView.axml" />
+    <AndroidResource Include="Resources\layout\LayerItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

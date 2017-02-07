@@ -191,11 +191,14 @@ namespace ArcGIS3DViewer
 			// aapt resource value: 0x7f050002
 			public const int BtnOK = 2131034114;
 			
+			// aapt resource value: 0x7f050007
+			public const int LayerItemName = 2131034119;
+			
 			// aapt resource value: 0x7f050001
 			public const int LvList = 2131034113;
 			
-			// aapt resource value: 0x7f05000e
-			public const int SceneView = 2131034126;
+			// aapt resource value: 0x7f05000f
+			public const int SceneView = 2131034127;
 			
 			// aapt resource value: 0x7f050004
 			public const int bookmarkImage = 2131034116;
@@ -203,35 +206,50 @@ namespace ArcGIS3DViewer
 			// aapt resource value: 0x7f050005
 			public const int bookmarktile = 2131034117;
 			
-			// aapt resource value: 0x7f05000c
-			public const int btnPotal = 2131034124;
+			// aapt resource value: 0x7f05000d
+			public const int btnPotal = 2131034125;
 			
-			// aapt resource value: 0x7f05000a
-			public const int imageView = 2131034122;
+			// aapt resource value: 0x7f050014
+			public const int btnspk = 2131034132;
+			
+			// aapt resource value: 0x7f050015
+			public const int button2 = 2131034133;
+			
+			// aapt resource value: 0x7f050011
+			public const int button3 = 2131034129;
+			
+			// aapt resource value: 0x7f05000b
+			public const int imageView = 2131034123;
 			
 			// aapt resource value: 0x7f050000
 			public const int item_touch_helper_previous_elevation = 2131034112;
 			
-			// aapt resource value: 0x7f05000f
-			public const int listLayer = 2131034127;
-			
 			// aapt resource value: 0x7f050010
-			public const int listbookmark = 2131034128;
+			public const int listLayer = 2131034128;
 			
-			// aapt resource value: 0x7f050008
-			public const int masonry_item_img = 2131034120;
+			// aapt resource value: 0x7f050012
+			public const int listbookmark = 2131034130;
 			
 			// aapt resource value: 0x7f050009
-			public const int masonry_item_title = 2131034121;
+			public const int masonry_item_img = 2131034121;
 			
-			// aapt resource value: 0x7f05000d
-			public const int recyclerView = 2131034125;
+			// aapt resource value: 0x7f05000a
+			public const int masonry_item_title = 2131034122;
 			
-			// aapt resource value: 0x7f050007
-			public const int sceneView1 = 2131034119;
+			// aapt resource value: 0x7f05000e
+			public const int recyclerView = 2131034126;
 			
-			// aapt resource value: 0x7f05000b
-			public const int textView = 2131034123;
+			// aapt resource value: 0x7f050008
+			public const int sceneView1 = 2131034120;
+			
+			// aapt resource value: 0x7f05000c
+			public const int textView = 2131034124;
+			
+			// aapt resource value: 0x7f050016
+			public const int textView3 = 2131034134;
+			
+			// aapt resource value: 0x7f050013
+			public const int textView4 = 2131034131;
 			
 			// aapt resource value: 0x7f050006
 			public const int webview = 2131034118;
@@ -259,19 +277,22 @@ namespace ArcGIS3DViewer
 			public const int EsriHelp = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Main = 2130903043;
+			public const int LayerItem = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int masonry_item = 2130903044;
+			public const int Main = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int PhotoCardView = 2130903045;
+			public const int masonry_item = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int ProtalView = 2130903046;
+			public const int PhotoCardView = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int SceneViewLayout = 2130903047;
+			public const int ProtalView = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int SceneViewLayout = 2130903048;
 			
 			static Layout()
 			{

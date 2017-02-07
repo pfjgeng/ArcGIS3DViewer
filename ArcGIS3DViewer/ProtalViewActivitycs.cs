@@ -16,7 +16,7 @@ using System.IO;
 
 namespace ArcGIS3DViewer
 {
-    [Activity(Label = "欢迎访问Portal WebScene", MainLauncher = false, Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "欢迎访问Portal WebScene", MainLauncher = true, Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class ProtalViewActivitycs : Activity
     {
         private List<Product> productList;
@@ -62,9 +62,9 @@ namespace ArcGIS3DViewer
 
             RecyclerView recyclerView = (RecyclerView)FindViewById(Resource.Id.recyclerView);
             //设置layoutManager 布局模式
-         //   recyclerView.SetLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.Vertical));
+           recyclerView.SetLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.Vertical));
 
-            recyclerView.SetLayoutManager(new LinearLayoutManager(this));
+          //  recyclerView.SetLayoutManager(new LinearLayoutManager(this));
             //设置adapter
 
             Context context = this.BaseContext;
@@ -82,10 +82,8 @@ namespace ArcGIS3DViewer
         {
             try
             {
-                string tag = productList[e].PortalItemJson;
-                int pos = int.Parse(tag.Substring(0, 1));
-                string json = tag.Substring(1);
-                var SceneViewActivity = new Intent(this, typeof(MainActivity));
+                string json = productList[e].PortalItemJson;
+                var SceneViewActivity = new Intent(this, typeof(SceneViewActivity));
                 Bundle bundle = new Bundle();
                 bundle.PutString("PortalItemJson", json);
                 bundle.PutString("name", productList[e].Title);
